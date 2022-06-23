@@ -42,6 +42,18 @@ function updateName() {
     para.textContent = `Player 1: ${name}`;
 }
 
+function createParagraph() {
+  const para = document.createElement('p');
+  para.textContent = 'You clicked the button and therefore added new paragraph!';
+  document.body.appendChild(para);
+}
+
+const buttons = document.querySelectorAll('button');
+
+for (const button of buttons) {
+  button.addEventListener('click', createParagraph);
+}
+
 /*
 Everything in between is a comment.
 */
