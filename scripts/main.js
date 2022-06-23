@@ -18,7 +18,7 @@ function setUserName() {
         setUserName();
     } else{
         localStorage.setItem('name', myName)
-        myHeading.textContent = 'Mozilla is cool,' + myName;
+        myHeading.textContent = 'Mozilla is cool, ' + myName;
     }
 
 }
@@ -32,6 +32,16 @@ if(!localStorage.getItem('name')){
 myButton.onclick = function () {
     setUserName();
 }
+
+const para = document.querySelector('p');
+
+para.addEventListener('click', updateName);
+
+function updateName() {
+    const name = prompt('Enter a new name');
+    para.textContent = `Player 1: ${name}`;
+}
+
 /*
 Everything in between is a comment.
 */
